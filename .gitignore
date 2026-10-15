@@ -1,0 +1,15 @@
+# Build output
+bin/
+obj/
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.user
+
+# macOS
+.DS_Store
+
+# Holds your real database password
+appsettings.Development.json

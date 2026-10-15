@@ -1,0 +1,39 @@
+@model Product
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<h3>Create New Product</h3>
+
+<form asp-action="Create" method="post" class="col-md-6">
+    <div class="mb-3">
+        <label asp-for="name" class="form-label">Name</label>
+        <input asp-for="name" class="form-control" placeholder="Enter Name" />
+        <span asp-validation-for="name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="description" class="form-label">Description</label>
+        <input asp-for="description" class="form-control" placeholder="Enter Description" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="price" class="form-label">Price</label>
+        <input asp-for="price" class="form-control" placeholder="Enter Price" />
+        <span asp-validation-for="price" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="stock" class="form-label">Stock</label>
+        <input asp-for="stock" class="form-control" placeholder="Enter Stock" />
+        <span asp-validation-for="stock" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="category" class="form-label">Category</label>
+        <input asp-for="category" class="form-control" placeholder="Enter Category" />
+        <span asp-validation-for="category" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
