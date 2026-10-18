@@ -7,11 +7,12 @@ It comes with full CRUD and is already connected to SQL Server running in Docker
 
 ```mermaid
 flowchart LR
-    A[User] --> B[Efboilerplate]
-    B --> C{Logic}
-    C --> D[(Data)]
-    C --> E[Output]
-    D --> C
+    Client[Client] --> Controller[ASP.NET Controller]
+    Controller --> Service[Service layer]
+    Service --> DbContext[EF Core DbContext]
+    DbContext --> DB[(SQL Server/PostgreSQL)]
+    Controller --> Auth[ASP.NET Identity]
+    Auth --> DbContext
 ```
 
 
