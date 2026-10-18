@@ -3,6 +3,18 @@
 A `dotnet new` template for **ASP.NET Core MVC + Entity Framework Core (.NET 10)**.
 It comes with full CRUD and is already connected to SQL Server running in Docker.
 
+## Architecture / How it Works
+
+```mermaid
+flowchart LR
+    A[User] --> B[Efboilerplate]
+    B --> C{Logic}
+    C --> D[(Data)]
+    C --> E[Output]
+    D --> C
+```
+
+
 ## Requirements
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)
