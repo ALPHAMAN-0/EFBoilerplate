@@ -5,7 +5,6 @@ obj/
 # IDE
 .vs/
 .idea/
-.vscode/
 *.user
 
 # macOS
@@ -13,3 +12,5 @@ obj/
 
 # Holds your real database password
 appsettings.Development.json
+config.bat
+node_modules
