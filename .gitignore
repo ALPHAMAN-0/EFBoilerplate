@@ -12,5 +12,4 @@ obj/
 
 # Holds your real database password
 appsettings.Development.json
-config.bat
 node_modules
